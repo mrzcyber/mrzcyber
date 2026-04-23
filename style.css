@@ -1,0 +1,427 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'popins',sans-serif;
+    outline: none;
+    border: none;
+}
+
+body{
+   color: white;
+    background-color: black;
+}
+
+
+.navigation{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    /* height: 3rem; */
+ 
+
+    align-items: center;
+    /* border-bottom: 3px solid rgb(251, 243, 243); */
+}
+.navi{
+   display: flex;
+    width:  30rem;
+    padding: 10px;
+    
+    margin-right: 20px;
+    justify-content: space-between;
+   
+    
+}
+.navi a{
+    font-size: 1.1rem;
+    font-weight: 700;
+   color: rgb(255, 255, 255);
+}
+.thumb {
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+.navi a::after{
+    content: "";
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid rgb(69, 155, 230);
+    transform: scaleX(0);
+    
+    transition: 0.4s linear;
+}
+
+.navi a:hover::after{
+    
+    transform: scaleX(0.8);
+}
+.home{
+    
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    }
+
+
+
+    .image{
+                    -webkit-box-shadow: 8px 8px 24px 0px rgba(251,251,251, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(251,251,251, 1);
+box-shadow: 8px 8px 24px 0px rgba(251,251,251, 1);
+       
+       margin-right: 50px;
+       width: 400px;
+       height: 400px;
+       transition: 0.5s;
+       overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+
+    }
+
+    .image img{
+  width: 100%;
+  height: 100%;
+      transform: scale(1.2);
+      object-fit: cover;
+      /* padding-bottom: 100px; */
+     
+      /* margin-left: 40px; */
+      /* margin-bottom: 20px; */
+       animation:  0.7s;
+       /* transform: translateX(200px); */
+      
+      
+    }
+
+    .image .item:nth-child(2){
+         transform: translateX(100px);
+    }
+
+
+
+
+
+    .image:hover{
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(69, 155, 230, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(69, 155, 230, 1);
+box-shadow: 8px 8px 24px 0px rgba(69, 155, 230, 1);
+        
+    }
+      .image img:hover{
+        opacity: 0.3;
+    }
+   
+
+ 
+ 
+
+    .home-content{
+        /* background-color: wheat; */
+        margin-left: 30px;
+        max-width: 500px;
+      
+    }
+
+    .home-content h1{
+        font-size: 2.5rem;
+       
+      
+    }
+
+
+    .home-content h3{
+        
+       color: rgb(69, 155, 230);
+       
+        /* width: 100px;  */
+    
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 3px solid rgba(255, 255, 255, .75); 
+    font-size: 2em; 
+     margin-top: 10px;
+        font-size: 2rem;
+    /* PENTING: Animasi diatur untuk berulang (infinite) */
+    
+       
+       
+    }
+
+
+
+
+
+
+
+
+
+    .home-content p{
+        margin-top: 15px;
+      
+    }
+    .btn{
+        margin-top: 20px;
+     
+        width:200px ;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn a{
+        border: 2px solid rgb(69, 155, 230);
+border-radius: 5px;
+        padding: 5px 20px;
+        color: rgb(251, 251, 251);
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        background-color: rgb(69, 155, 230);
+        z-index: 1;
+    }
+       .btn a:nth-child(2){
+    color: white;
+    background-color: black;
+       }
+   
+    .btn a:before{
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width:0;
+        height: 100%;
+        z-index: -1;
+        background-color: black;
+        transition: 1s;
+
+    }
+
+    .btn a:hover::before{
+        width: 100%;
+      
+    }
+
+     .btn a:nth-child(2):hover::before{
+        width: 100%;
+        background-color:rgb(69, 155, 230);
+     }
+
+     .url{
+        padding-top: 20px;
+      
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    
+     }
+
+     .url a{
+        color: white;
+        position: relative;
+        padding: 6px;
+        border: 2px solid rgb(69, 155, 230);
+        border-radius: 50%;
+        overflow: hidden;
+        transition: 1s;
+     }
+     .url a:hover{
+        color: black;
+     }
+
+     .url a::before{
+         content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width:0;
+        height: 100%;
+        z-index: -1;
+        background-color: rgb(69, 155, 230);
+        transition: 1s;
+     }
+     .url a:hover::before{
+        width: 100%;
+
+     }
+
+
+         
+    .home-content h1,
+    .home-content p,
+    .home-content .btn,
+    .home-content .url{
+        animation: hidedetail 0.5s 0.8s linear 1 forwards; 
+                     transform: translateY(150px);
+    filter: blur(20px);
+    opacity: 0;
+    }
+
+    @keyframes hidedetail{
+        to{
+             transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+        }
+
+    }
+
+    .home-content h1{
+        animation-delay: 1.2s;
+    }
+
+
+    .home-content p{
+        animation-delay: 1.6s;
+    }
+
+    .home-content .btn{
+        animation-delay: 1.8s;
+    }
+
+    .home-content .url{
+        animation-delay: 2s;
+    }
+
+    /* .image img{
+        opacity: 0;
+        filter: brightness(0);
+        animation:trimage 1s 1s linear 1 forwards;
+
+    }
+
+    @keyframes trimage{
+        to{
+            opacity: 1;
+            filter: brightness(1);
+        }
+    } */
+
+    .home-content h3{
+           animation: 
+           hidedetail 0.5s 0.8s linear 1 forwards,
+             typing 6s steps(10) infinite,
+            blin 5s step-end infinite alternate;
+            
+                     transform: translateY(150px);
+    filter: blur(20px);
+    opacity: 0;
+    }
+
+
+    @keyframes typing {
+  0% {
+    width: 100px;
+  }
+  /* Tahap Mengetik: dari detik ke-0 hingga detik ke-3 (50% dari 6s) */
+  50% {
+    width: 270px; /* Lebar penuh */
+  }
+  /* Jeda: Tetap di lebar penuh selama 1 detik (dari 50% ke 66.6%) */
+  66.6% {
+    width: 270px;
+  }
+  /* Tahap Menghapus: kembali ke 0 dari 66.6% hingga 100% */
+  100% {
+    width: 100px;
+  }
+}
+
+
+   
+    .home-content h3{
+animation-delay: 1.4s;
+    }
+
+
+    @media (max-width:430px){
+       .home-content{
+        max-width: 260px;
+        margin: 0;
+       } 
+       .home-content h1 span{
+        display: none;
+       }
+       .home-content h1{
+        font-size: 2.2rem;
+       }
+       .home-content h3{
+        font-size: 1.8rem;
+       }
+
+       .navi{
+        display: none;
+       }
+       .thumb{
+        margin: 0;
+        cursor: pointer;
+       }
+       .navigation{
+        padding: 10px 0px;
+       }
+
+       .image{
+        margin-right: 10px;
+       }
+
+
+           .home-content h3{
+           animation: 
+           hidedetail 0.5s 0.8s linear 1 forwards,
+             typing 6s steps(8) infinite,
+            blin 5s step-end infinite alternate;
+            
+                     transform: translateY(150px);
+    filter: blur(20px);
+    opacity: 0;
+    }
+
+
+    @keyframes typing {
+  0% {
+    width: 100px;
+  }
+  /* Tahap Mengetik: dari detik ke-0 hingga detik ke-3 (50% dari 6s) */
+  50% {
+    width: 250px; /* Lebar penuh */
+  }
+  /* Jeda: Tetap di lebar penuh selama 1 detik (dari 50% ke 66.6%) */
+  66.6% {
+    width: 250px;
+  }
+  /* Tahap Menghapus: kembali ke 0 dari 66.6% hingga 100% */
+  100% {
+    width: 100px;
+  }
+}
+
+.thumb::after{
+    content: "";
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid rgb(69, 155, 230);
+    transform: scaleX(0);
+    
+    transition: 0.4s linear;
+}
+
+.thumb:hover::after{
+    
+    transform: scaleX(0.8);
+}
+        
+    }
